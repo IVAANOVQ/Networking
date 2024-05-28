@@ -57,5 +57,10 @@ public class Client extends Thread {
         int serverPort = 8080;
         Client client = new Client(serverName, serverPort);
         client.start();
+//        String port=System.getenv("SERVER_PORT");
+//        Client client=new Client(Integer.parseInt(System.getenv("SERVER_PORT")));
+//        client.start();
     }
 }
+
+
