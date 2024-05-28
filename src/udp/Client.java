@@ -45,7 +45,7 @@ public class Client extends Thread {
 
             String serverName =  "localhost";
 
-            // Sending login message
+          
             Client loginClient = new Client(serverName, 4445, "login");
             loginClient.start();
             try {
@@ -54,7 +54,7 @@ public class Client extends Thread {
                 e.printStackTrace();
             }
 
-            // Sending some test messages
+            
             Client testClient1 = new Client(serverName, 4445, "test mssg");
             testClient1.start();
             try {
@@ -71,9 +71,10 @@ public class Client extends Thread {
                 e.printStackTrace();
             }
 
-            // Sending logout message
             Client logoutClient = new Client(serverName, 4445, "logout");
             logoutClient.start();
+        //        Client client = new Client(System.getenv("SERVER_NAME"), Integer.parseInt(System.getenv("SERVER_PORT")), "login");
+//        client.start();
         }
 
 
